@@ -9,19 +9,19 @@ body{
     background-image: url(./img/imagen-de-fondo1.jpg);
     background-size: cover;
     background-attachment: fixed;
-    
+    display: flex;
+    flex-direction: column;
 }
+
 .contenedor{
-    width: auto;
-    height: 90%;
-    margin: 10px auto;
+    margin: auto;
+    width: 90%;
     display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-    grid-template-rows: 0.5fr 6fr 0.5fr;
-    gap: 10px;
+    grid-template-columns: 1fr 2.5fr 0.5fr;
+    grid-template-rows: 1fr 5fr 0.7fr;
     grid-template-areas: 
     "empty header header"
-    "empty aside main"
+    "empty main aside"
     "footer footer footer";
 }
 h1{
@@ -46,8 +46,9 @@ p{
 
 
 .header .navbar{
-    
-    height: 150px;
+    margin: 5px;
+    width: 1fr;
+    height: auto;
     background-color: #f0f8ff;
     border-radius: 5px;
     grid-area: header;
@@ -55,7 +56,7 @@ p{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-  
+    padding: 20px;
 }
 .header img{
     border-radius: 50px;
@@ -91,6 +92,12 @@ header .menu a:hover{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+.main img{
+    margin: 10px;
+    border-style: groove;
+    align-items: center;
+    
 }
 .info{
     margin: 20px;      
@@ -143,17 +150,19 @@ header .menu a:hover{
 
 .empty {
     
-    height: auto;
+    height: 800px;
     margin: 5px;
     grid-area: empty;
     border: white 2px solid;
     display: flex;
-    overflow: auto;
+    overflow: scroll;
     background-color: #ffffff;
     border-radius: 5px;  
     opacity: 0.9;
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+
 }
 
 
